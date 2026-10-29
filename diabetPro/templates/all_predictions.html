@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>all predictions</title>
+</head>
+<body>
+<h1>All Prediction</h1>
+
+<nav>
+    <a href="/myapp/home/">HOME</a>
+</nav>
+
+<table border="2">
+    <tr>
+        <th>Pregnancies</th>
+        <th>Glucose</th>
+        <th>BloodPressure</th>
+        <th>SkinThickness</th>
+        <th>Insulin</th>
+        <th>BMI</th>
+        <th>DiabetesPedigreeFunction</th>
+        <th>Age</th>
+        <th>Outcome</th>
+        <th>Explanation</th>
+    </tr>
+    {% for i in data %}
+        <tr>
+        <td>{{ i.pregnancies }}</td>
+        <td>{{ i.glucose }}</td>
+        <td>{{ i.bloodPressure }}</td>
+        <td>{{ i.skinThickness }}</td>
+        <td>{{ i.insulin }}</td>
+        <td>{{ i.bMI }}</td>
+        <td>{{ i.diabetesPedigreeFunction }}</td>
+        <td>{{ i.age }}</td>
+        <td>{{ i.outcome }}</td>
+        <td>{{ i.explanation }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
