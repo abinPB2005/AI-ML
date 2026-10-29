@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view predictions</title>
+</head>
+<body>
+<h1>View Predictions</h1>
+
+<nav>
+    <a href="/myapp/user_home/">Home</a>
+</nav>
+
+<table border="2">
+    <tr>
+        <th>PH</th>
+        <th>TDS</th>
+        <th>Turbidity</th>
+        <th>Water_quality</th>
+        <th>Explanation</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td>{{ i.ph }}</td>
+        <td>{{ i.tds }}</td>
+        <td>{{ i.turbidity }}</td>
+        <td>{{ i.water_quality }}</td>
+        <td>{{ i.explanation }}</td>
+
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

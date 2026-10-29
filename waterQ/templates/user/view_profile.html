@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view profile</title>
+</head>
+<body>
+<h1>User Profile</h1>
+
+<nav>
+    <a href="/myapp/user_home/">Home</a>
+</nav>
+
+<table border="2">
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Age</th>
+    <th>Place</th>
+
+
+    <tr>
+    <td>{{ data.name }}</td>
+    <td>{{ data.email }}</td>
+    <td>{{ data.phone }}</td>
+    <td>{{ data.age }}</td>
+    <td>{{ data.place }}</td>
+    </tr>
+
+</table>
+
+<a href="/myapp/edit_user_profile/">Edit Profile</a>
+</body>
+</html>

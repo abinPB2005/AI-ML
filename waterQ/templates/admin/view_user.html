@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view user</title>
+</head>
+<body>
+<h1>View users</h1>
+
+<nav>
+    <a href="/myapp/admin_home/">Home</a>
+</nav>
+
+<table border="2">
+    <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Age</th>
+    <th>Place</th>
+
+{% for i in data %}
+    <tr>
+    <td>{{ i.name }}</td>
+    <td>{{ i.email }}</td>
+    <td>{{ i.phone }}</td>
+    <td>{{ i.age }}</td>
+    <td>{{ i.place }}</td>
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>

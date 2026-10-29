@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view feedback</title>
+</head>
+<body>
+<h1>View Feedback</h1>
+<nav>
+    <a href="/myapp/admin_home/">Home</a>
+</nav>
+<table border="2">
+    <tr>
+        <th>User</th>
+        <th>Feedback</th>
+    </tr>
+    {% for i in data %}
+        <tr>
+        <td>{{ i.User.name }}</td>
+        <td>{{ i.feedback }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

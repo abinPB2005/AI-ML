@@ -1,0 +1,45 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>result</title>#}
+{#</head>#}
+{#<body>#}
+{#<h1>Result</h1>#}
+{#<p>{{ water_quality }}</p>#}
+{#<p>{{ explanation }}</p>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+<h2>Water Quality Result</h2>
+
+<nav>
+    <a href="/myapp/user_home/">Home</a>
+</nav>
+
+<p>
+    <strong>Predicted Water Quality:</strong>
+    {{ water_quality }}
+</p>
+
+<h3>Feature Contributions (SHAP)</h3>
+
+{% if explanation %}
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Feature</th>
+            <th>SHAP Value</th>
+        </tr>
+
+        {% for feature, value in explanation.items %}
+        <tr>
+            <td>{{ feature }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No explanation available.</p>
+{% endif %}
